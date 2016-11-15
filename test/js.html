@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>判断文本框是否为空</title>
+	<script type="text/javascript">
+	/*function validate(){
+		var _txtNameObj = document.all.txtName;
+		var _txtNameValue = _txtNameObj.value;
+		if((_txtNameValue == null)||(_txtNameValue.length < 1)){
+			window.alert("error");
+			_txtNameObj.focus();
+			return;
+		}
+	}*/
+	
+	
+
+	function disptime(){
+			//创建日期对象now，并实现当前日期的输出
+			var now =  new Date();
+			//document.write("<h1>柯南旅游网</h1>");
+			document.write("<h2>今天日期："+now.getFullYear()+"年"+(now.getMonth()+1)+"月"+now.getDate()+"日</h2>");//放在页面上显示当前年月
+		}
+	</script>
+	
+</head>
+<body>
+<div onload="disptime()"></div>
+<!-- <form method="post" action="">
+<input type="text" name="txtName">
+<input type="button" value="确定" onclick="validate()">
+</form>
+<center>
+	<p>使用伪URL地址引入JavaScript脚本代码</p>
+	<form>
+	<input type="text" name="text1" value="点击" onclick="JavaScript:alert('已用鼠标点击文本框')">
+	</form>
+</center> -->
+
+<h1 id="myH1"></h1>
+<p id="myP"></p>
+<p>点击来创建变量，并显示结果</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<form name="myform" action="" method="get">
+用户名：<input name="name" type="text"/><br>
+密码：<input type="text" name="pwd"><br>
+<input type="submit" name="" onClick="check()" value="登录">
+</form>
+
+<script type="text/javascript">
+	function check(){
+		if (myform.name.value=="") {
+			alert("名字不能为空！");
+			myform.name.focus();
+			return false;
+		}
+		if(myform.pwd.value==""){
+			alert("密码不能为空！");
+			myform.pwd.focus();
+			return false;
+		}
+	}
+	document.getElementById("myH1").innerHTML= "welcom to my homepage";
+	document.getElementById("myP").innerHTML="this is my first paragraph";
+	function myFunction(){
+		var carname = "宝马";
+		document.getElementById("demo").innerHTML=carname;
+	}
+</script>
+<p><b>注释</b>多行注释写作/* */</p>
+
+</body>
+</html>

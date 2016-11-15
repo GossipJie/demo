@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app>  
+<head>     
+<script src="http://code.angularjs.org/angular-1.1.0.min.js"></script>    
+<!-- <script src="script.js"></script>  --> 
+</head>  
+<body>     
+    <div ng-controller="MyCtrl">      
+        Hello {{name}}!       
+        <button ng-click="action()">        
+            OK       
+        </button>    
+    </div> 
+    <script type="text/javascript">
+    
+    function MyCtrl($scope) {   
+        $scope.action = function() {    
+            $scope.name = 'OK';  
+        }   
+        $scope.name = 'World' ;
+    }
+    </script>
+</body>
+</html>
